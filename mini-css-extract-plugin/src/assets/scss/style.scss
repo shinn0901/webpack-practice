@@ -1,0 +1,15 @@
+@import "./variable.scss";
+
+body {
+  background-color: $color_Background;
+  #wrapper {
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    background-color: #fff;
+    p {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+  }
+}
