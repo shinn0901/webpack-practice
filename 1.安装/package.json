@@ -1,0 +1,9 @@
+{
+  "name": "webpack-安装",
+  "version": "1.0.0",
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

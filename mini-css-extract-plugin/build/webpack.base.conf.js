@@ -2,6 +2,9 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin')
+const CopyWebpack = require('copy-webpack-plugin')
+
+const baseConfig = require('./../config/base.config')
 
 const currentPath = './..'
 
@@ -12,10 +15,11 @@ const isProduction = env === 'production'
 
 
 const assetsPath = (fileCategory) => {
-    return isProduction ?
-        fileCategory + '/[name].[chunkhash:5].' + fileCategory :
-        fileCategory + '/[name].' + fileCategory
+    const nameRules = (isProduction ? '[name].[chunkhash:5].' : '[name].') + fileCategory
+    return path.join(baseConfig.assetsFolderName, fileCategory, nameRules)
 }
+
+
 
 module.exports = {
     mode: 'development',
@@ -124,7 +128,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'webpack 入门学习',
-            template: pathJoin('src/index.html'),
+            template: pathJoin('src/html/index.html'),
             minify: isProduction ? {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -135,7 +139,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'webpack 学习与测试',
             filename: 'test/test.html',
-            template: pathJoin('src/test.html'),
+            template: pathJoin('src/html/test.html'),
             minify: isProduction ? {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -147,6 +151,11 @@ module.exports = {
             filename: assetsPath('css'),
             chunkFilename: assetsPath('css')
         }),
-        // new OptimizeCSSAssets()
+        new OptimizeCSSAssets(),
+        new CopyWebpack([{
+            from: pathJoin('src/assets/'),
+            to: baseConfig.assetsFolderName,
+            test: baseConfig.assetsResource
+        }])
     ]
 }
