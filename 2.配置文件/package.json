@@ -1,0 +1,14 @@
+{
+  "name": "webpack-practice-2",
+  "version": "1.0.0",
+  "description": "2.配置文件",
+  "scripts": {
+    "test":"webpack --config test.conf.js",
+    "build":"webpack --config build.conf.js"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

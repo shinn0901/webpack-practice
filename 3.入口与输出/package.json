@@ -1,0 +1,13 @@
+{
+  "name": "webpack-practice-3",
+  "version": "1.0.0",
+  "description": "3.入口与输出",
+  "scripts": {
+    "build":"webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

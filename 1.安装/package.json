@@ -1,6 +1,7 @@
 {
-  "name": "webpack-安装",
+  "name": "webpack-practice-1",
   "version": "1.0.0",
+  "description": "1.安装",
   "devDependencies": {
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",

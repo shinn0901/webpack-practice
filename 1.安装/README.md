@@ -6,11 +6,13 @@
     npm init -y
 ```
 
-初始化完毕后，我们打开webpack的官网：[https://webpack.js.org/](https://webpack.js.org/)，阅读英文有困难的小伙伴，可以选择右上方的语言切换按钮（<img src="https://webpack.js.org/57c717e75066b659cfe19dc2a643153c.svg" style="width:20px;height:20px;vertical-align:middle;">）然后选择中文阅览。切换好语言后，我们再次点击导航栏中的“文档”栏目，并点击二级导航的“指南”页面。这时，左侧的菜单中，就已经出现了webpack的基础指南。
+初始化完毕后，我们打开webpack的官网：https://webpack.js.org/，阅读英文有困难的小伙伴，可以选择右上方的语言切换按钮,选择中文阅览。切换好语言后，我们再次点击导航栏中的“文档”栏目，并点击二级导航的“指南”页面。这时，左侧的菜单中，就已经出现了webpack的基础指南。
+
+![选择语言](https://github.com/shinn0901/webpack-practice/blob/master/assets/images/01-01.png?raw=true)
 
 首先我们选择菜单-安装
 
-出于学习的目的，大家可以选择全局安装。而如果出于项目制作的考虑，以及可能会用到Git进行版本控制和分享，我推荐大家进行本地安装。使用本地安装，webpack会存于node_modules文件夹内与devDependencies属性内，更方便项目文件迁移以及协同开发等情况。
+出于学习的目的，大家可以选择全局安装。而如果出于项目制作的考虑，以及可能会用到Git进行版本控制和分享，我推荐大家进行本地安装本地化安装命令。使用本地安装，webpack会存于node_modules文件夹内与devDependencies属性内，更方便项目文件迁移以及协同开发等情况。
 
 使用webpack需要安装3个包，分别是
 
@@ -25,9 +27,9 @@ webpack-dev-server是我们在开发环境时，不可能每一次调试都重�
 使用npm命令：
 
 ```bash
-    npm install --save-dev webpack webpack-cli webpack-dev-server
+npm install --save-dev webpack webpack-cli webpack-dev-server
 ```
 
-![安装成功](https://segmentfault.com/img/bVbwaa3)
+![安装成功](https://github.com/shinn0901/webpack-practice/blob/master/assets/images/01-02.png?raw=true)
 
 好的，安装成功。

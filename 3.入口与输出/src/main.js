@@ -1,0 +1,1 @@
+console.log('我们现在想测试webpack的打包功能.')
